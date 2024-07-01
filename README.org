@@ -1,0 +1,30 @@
+#+title: Readme
+
+* About
+
+Seamless specification of actor-based/Agents distributed systems to streamline
+and integrate the practice of: implementation of fault tolerant distributed
+systems, the verification and model checking of implementations, and the
+generation of final code targeting different actors frameworks. For now, a
+/tentative/ target is the actors concurrency models (so far [[https://github.com/slawlor/ractor][ractor]] comes to mind
+due to its close resemblance of Scala's Akka Actors whose DS2 is built on), but
+may extend to other concurrency models as well. More target implementations
+might be added at a later stage. For experimentation, it is still to be decided
+which actors framework to target for simplicity and faster development.
+
+*NOTE:* This project is the official port of [[https://github.com/mohdsm81/ds2][DS2's]] Scala implementation to Rust.
+This implementation will have more features, more modern design inline with
+idiomatic Rust and will try to be more ergonomic for practitioners.
+
+* Initial Goals
+
+The main goal is to be the defacto standard for high performing, formally
+verified/model-checked, and efficient implementations of multi-agent distributed
+systems for Rust.
+
+Target platforms will include embedded systems, cloud computing, cyberphysical
+systems (e.g. robotics), multi-agent machine learning.
+
+The project tries to implement most of code transformations and instrumentation
+using macros, but some approaches for software verification require runtime runs
+(e.g. checking linearizability implemented on top of communications protocols).
